@@ -1,0 +1,112 @@
+* {
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   padding: 0;
+}
+
+body {
+   padding: 0;
+}
+
+.title {
+   margin: 5rem 0 2.5rem 0;
+   text-align: center;
+}
+
+.gameBoard {
+   width: max-content;
+   display: grid;
+   grid-template-columns: repeat(3, auto);
+   grid-gap: 2px;
+   justify-content: center;
+   align-content: center;
+   justify-items: center;
+   align-items: center;
+   margin: 0 auto;
+   background-color: black;
+}
+
+.cell {
+   width: 5rem;
+   height: 5rem;
+   font-size: 3rem;
+   color: goldenrod;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   background-color: white;
+}
+
+.controls {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   justify-items: center;
+   align-items: center;
+   width: 25rem;
+   margin: 2rem auto;
+}
+
+.controls > input {
+   text-align: center;
+}
+
+.controls > input:hover {
+   background-color: whitesmoke;
+}
+
+.controls > ::placeholder {
+   text-align: center;
+}
+
+.buttons {
+   grid-column: 1 / -1;
+   grid-row: 2 / -1;
+   display: flex;
+   justify-content: center;
+   gap: 3rem;
+}
+
+.buttons > button {
+   width: 7rem;
+   background-color: white;
+   cursor: pointer;
+}
+
+.buttons > button:hover {
+   background-color: goldenrod;
+   color: white;
+}
+
+.result {
+   display: none;
+   position: fixed;
+   top: 0;
+   right: 0; 
+   bottom: 0;
+   left: 0;
+   background-color: rgba(218, 165, 32, 0.8);
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-size: 5rem;
+   gap: 2rem;
+}
+
+.result.show {
+   display: flex;
+}
+
+.result > button {
+   width: 10rem;
+   height: 3rem;
+   font-size: 2rem;
+   background-color: white;
+   cursor: pointer;
+}
+
+.result > button:hover {
+   background-color: goldenrod;
+   color: white;
+}
